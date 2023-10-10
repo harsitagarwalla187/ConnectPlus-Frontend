@@ -79,7 +79,7 @@ function Login() {
       })
       .catch((err) => {
         setLoading(false);
-        if(err.response.status == 404)
+        if(err.response.status === 404)
         Navhandler('/profile');
         console.log(err);
       });
@@ -88,7 +88,7 @@ function Login() {
       .catch((err) => {
         setLoading(false);
         console.log(err);
-        if(err.response.status == 401)
+        if(err.response.status === 401)
         toast.error("Wrong Password")
         else
         toast.error('Enter a valid email address')
